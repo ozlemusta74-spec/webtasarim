@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Özlem — Kişisel Site</title>
+  <meta name="description" content="Özlem'in kişisel web sitesi: kıyafet, müzik, spor ve yemek.">
+  <link rel="icon" type="image/jpeg" href="Resim/maskot.jpg">
+  <link rel="apple-touch-icon" href="Resim/maskot.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#kapak">İçeriğe geç</a>
+
+  <header class="site-header" id="ust-menu">
+    <div class="container header-inner">
+      <a class="brand" href="#kapak">Özlem</a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="ana-menu"
+      >Menü</button>
+
+      <nav class="site-nav" id="ana-menu" aria-label="Ana gezinme">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="#kapak" aria-current="location">Kapak</a></li>
+          <li><a class="nav-link" href="#hakkimda">Hakkımda</a></li>
+          <li><a class="nav-link" href="#ilgi-alanlarim">İlgi Alanlarım</a></li>
+          <li><a class="nav-link" href="#iletisim">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="kapak" aria-labelledby="kapak-baslik">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Kişisel Site</span>
+          <h1 id="kapak-baslik" class="hero-title">Özlem</h1>
+          <p class="hero-intro">
+            Kıyafetlerle uğraşan, müzik, spor ve yemekle ritmini bulan bir kişisel köşe.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="#hakkimda">Hakkımda</a>
+            <a class="btn btn-light" href="#ilgi-alanlarim">İlgi Alanlarım</a>
+          </div>
+        </div>
+
+        <figure class="hero-media-box">
+          <img
+            src="Resim/kapak.jpg"
+            alt="Çini bordürlü kare kompozisyonda lale ve karanfil motifleri arasında gülümseyen çini desenli bir kaplumbağa ile ayaklı tabak üzerinde ortadan açılmış kırmızı bir nar."
+            class="hero-image"
+            width="1024"
+            height="1024"
+          >
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-about" id="hakkimda" aria-labelledby="hakkimda-baslik">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">01 / Hakkımda</span>
+          <h2 id="hakkimda-baslik" class="section-title">Hakkımda</h2>
+        </div>
+
+        <div class="about-grid">
+          <figure class="mascot-card">
+            <div class="mascot-frame">
+              <img
+                src="Resim/maskot.jpg"
+                alt="Kırık beyaz zemin üzerinde kabuğu mavi laleler, kırmızı karanfiller ve turkuaz yapraklarla süslü, gülümseyen çini desenli kaplumbağa maskot."
+                class="mascot-image"
+                width="1024"
+                height="576"
+              >
+            </div>
+            <figcaption class="mascot-caption">Maskot: Çini Kaplumbağa</figcaption>
+          </figure>
+
+          <article class="about-card">
+            <div class="about-card-bar">Kısaca Ben</div>
+            <div class="about-card-body">
+              <p class="about-text">
+                Ben Özlem; günlerimi kıyafetlerle uğraşarak, farklı parçaları ve stilleri bir araya getirerek geçiriyorum. Hayatımda bana en çok mutluluk veren şey ise alışveriş yapmak. Kıyafetlerin renkli dünyasını müzik, spor ve keyifli yemeklerle dengelemeyi seviyorum.
+              </p>
+              <ul class="about-pills" aria-label="Öne çıkanlar">
+                <li class="pill pill-accent">Kıyafet</li>
+                <li class="pill pill-dark">Alışveriş</li>
+                <li class="pill pill-light">Müzik, Spor, Yemek</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-interests" id="ilgi-alanlarim" aria-labelledby="ilgi-baslik">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">02 / İlgi Alanlarım</span>
+          <h2 id="ilgi-baslik" class="section-title">İlgi Alanlarım</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="interest-card">
+            <div class="card-bar card-bar-accent">01 · Müzik</div>
+            <div class="card-media">
+              <img
+                src="Resim/kart_1.jpg"
+                alt="Üç panelli çini sahnesinde ud çalgısını keşfeden, ilk notaya şaşıran ve sonunda neşeyle ud çalıp şarkı söyleyen çini desenli kaplumbağa."
+                class="card-image"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Müzik</h3>
+              <p class="card-text">
+                Günün temposunu belirleyen melodiler, yeni keşifler ve her ruh hâline eşlik eden çalma listeleri.
+              </p>
+            </div>
+          </article>
+
+          <article class="interest-card">
+            <div class="card-bar card-bar-dark">02 · Spor</div>
+            <div class="card-media">
+              <img
+                src="Resim/kart_2.jpg"
+                alt="Çini bordürlü kare kompozisyonda lale ve karanfiller arasında oturarak mavi desenli bir ud çalan gülümseyen çini kaplumbağa."
+                class="card-image"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Spor</h3>
+              <p class="card-text">
+                Enerjimi tazeleyen, zihnimi dinlendiren ve gündelik hayata dinamizm katan hareketli rutinler.
+              </p>
+            </div>
+          </article>
+
+          <article class="interest-card">
+            <div class="card-bar card-bar-accent">03 · Yemek</div>
+            <div class="card-media">
+              <img
+                src="Resim/kart_3.jpg"
+                alt="Çini bordürlü kare kompozisyonda içinde narlar, mor üzümler ve sıcak ekmekler bulunan ayaklı çini kâseye bakan çini desenli kaplumbağa."
+                class="card-image"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Yemek</h3>
+              <p class="card-text">
+                Yeni tatlar denemek, özenle hazırlanan sofralarda buluşmak ve sevilen lezzetleri paylaşmak.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="iletisim" aria-labelledby="iletisim-baslik">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-copy">
+            <span class="section-tag section-tag-accent">03 / İletişim</span>
+            <h2 id="iletisim-baslik" class="section-title contact-title">İletişim</h2>
+            <p class="contact-text">
+              Çalışmalarımı incelemek veya bağlantı kurmak için aşağıdaki profillerime göz atabilirsin.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a
+              class="contact-link contact-link-light"
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-link-name">GitHub</span>
+              <span class="contact-link-meta">Profili aç</span>
+            </a>
+
+            <a
+              class="contact-link contact-link-accent"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-link-name">LinkedIn</span>
+              <span class="contact-link-meta">Profili aç</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-owner">Özlem</p>
+      <p class="footer-note">Bu sitedeki görseller yapay zekâ ile üretildi.</p>
+    </div>
+  </footer>
+</body>
+</html>

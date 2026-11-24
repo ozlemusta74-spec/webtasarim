@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çini Kaplumbağa Dünyası</title>
+  <style>
+    :root {
+      --bg-page: #f8f5ee;
+      --bg-card: #ffffff;
+      --bg-frame: #f6f3e8;
+      --cobalt: #163a70;
+      --turquoise: #1d8a99;
+      --terracotta: #c84b31;
+      --text-main: #1f2a37;
+      --text-muted: #4b5c6b;
+      --border-soft: #d9e2ec;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cover {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 4px solid var(--cobalt);
+      background-color: var(--bg-frame);
+    }
+
+    .cover img {
+      display: block;
+      width: 100%;
+      height: clamp(280px, 48vw, 560px);
+      object-fit: cover;
+      object-position: center 54%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+      flex: 1;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.25rem;
+      border-bottom: 2px solid var(--border-soft);
+    }
+
+    .mascot {
+      width: 104px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: var(--bg-frame);
+      border: 1.5px solid var(--turquoise);
+      flex-shrink: 0;
+    }
+
+    .page-title-group h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+      color: var(--cobalt);
+      line-height: 1.2;
+    }
+
+    .page-title-group p {
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      font-size: 1rem;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.6rem;
+      color: var(--cobalt);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 1.35em;
+      background-color: var(--terracotta);
+      border-radius: 3px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 14px rgba(22, 58, 112, 0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(22, 58, 112, 0.12);
+    }
+
+    .card-media {
+      background-color: var(--bg-frame);
+      aspect-ratio: 4 / 3;
+      padding: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .card-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .card-body h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      color: var(--cobalt);
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.25rem 1rem 1.75rem;
+      border-top: 1px solid var(--border-soft);
+      background-color: #f3efe4;
+    }
+
+    .ai-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 860px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page-header {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .mascot {
+        width: 84px;
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <img
+      src="Resim/kapak.jpg"
+      alt="İznik çinisi tarzında çerçeveli bir illüstrasyonda, kabuğu mavi ve kırmızı çiçek motifleriyle bezeli gülümseyen bir kaplumbağa, ayaklı çini bir tabaktaki kesilmiş kırmızı nara bakıyor; etrafında lale ve karanfil desenleri yer alıyor."
+    >
+  </div>
+
+  <main class="container">
+    <header class="page-header">
+      <img
+        class="mascot"
+        src="Resim/maskot.jpg"
+        alt="Açık krem rengi arka plan üzerinde, kabuğu ve bacakları mavi ve kırmızı lale ile karanfil motifli İznik çinisi desenleriyle süslenmiş gülümseyen kaplumbağa maskotu."
+      >
+      <div class="page-title-group">
+        <h1>Çini Kaplumbağa Dünyası</h1>
+        <p>Geleneksel İznik çinisi motifleriyle sanat, müzik ve hikâyeler</p>
+      </div>
+    </header>
+
+    <section aria-labelledby="ilgi-alanlarim-baslik">
+      <h2 id="ilgi-alanlarim-baslik" class="section-title">İlgi alanlarım</h2>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-media">
+            <img
+              src="Resim/kart_1.jpg"
+              alt="Üç panelli İznik çinisi çizgi hikâyesinde, desenli bir kaplumbağa önce bir udu merakla inceliyor, ardından havadaki müzik notalarına şaşkınlıkla bakıyor ve son panelde neşeyle gülerek ud çalıyor."
+            >
+          </div>
+          <div class="card-body">
+            <h3>Çizgi Hikâyeler</h3>
+            <p>Kısa sahnelerle merak, keşif ve neşe dolu küçük görsel hikâyeler anlatmak.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img
+              src="Resim/kart_2.jpg"
+              alt="İznik çinisi çerçeveli kare bir illüstrasyonda, kabuğu lale ve karanfil desenli gülümseyen kaplumbağa oturmuş, üzeri mavi çiçek motifleriyle süslü bir ud çalıyor."
+            >
+          </div>
+          <div class="card-body">
+            <h3>Geleneksel Müzik</h3>
+            <p>Ud tınıları ve geleneksel motiflerin buluştuğu huzurlu ezgiler dinlemek.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img
+              src="Resim/kart_3.jpg"
+              alt="İznik çinisi çerçeveli kare bir illüstrasyonda, turkuaz ve mavi desenli kaplumbağa, içinde narlar, üzümler ve susamlı pideler bulunan süslü ayaklı bir çini kâseye keyifle bakıyor."
+            >
+          </div>
+          <div class="card-body">
+            <h3>Sofra Kültürü</h3>
+            <p>Nar, üzüm ve taze ekmeklerle bezeli geleneksel sofraların sıcaklığını keşfetmek.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="ai-note">Bu sitedeki görseller yapay zekâ ile üretildi.</p>
+  </footer>
+</body>
+</html>
